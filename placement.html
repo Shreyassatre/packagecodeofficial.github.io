@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>creating a web site</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+	<!---navigation bar-->
+	<section id="nav-bar">
+		<nav class="navbar navbar-expand-lg  ">
+
+			<div id="clockbox"></div>
+
+			<script type="text/javascript">
+				var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+				var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+				function GetClock() {
+					var d = new Date();
+					var nday = d.getDay(), nmonth = d.getMonth(), ndate = d.getDate(), nyear = d.getFullYear();
+					var nhour = d.getHours(), nmin = d.getMinutes(), nsec = d.getSeconds(), ap;
+
+					if (nhour == 0) { ap = " AM"; nhour = 12; }
+					else if (nhour < 12) { ap = " AM"; }
+					else if (nhour == 12) { ap = " PM"; }
+					else if (nhour > 12) { ap = " PM"; nhour -= 12; }
+
+					if (nmin <= 9) nmin = "0" + nmin;
+					if (nsec <= 9) nsec = "0" + nsec;
+
+					var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
+					document.getElementById('clockbox').innerHTML = clocktext;
+				}
+
+				GetClock();
+				setInterval(GetClock, 1000);
+			</script>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="the-institute.html">The institute</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="academics.html">Academics</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="infrastructure.html">Infrasrtructure</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="activities.html">Activities</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="placement.html">Placement</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+	<!----------Image---------->
+	<div id="slider">
+		<div id="headerSlider" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#headerSlider" data-slide-to="0" class="active"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="interview.jpg"
+						style="width: 100%;height: 550px">
+				</div>
+				<div class="carousel-caption">
+					<h5>Academics</h5>
+				</div>
+
+			</div>
+		</div>
+		<!-------About--------->
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="about-content">
+							<h6 style="font-size: 1.5rem;text-align: center;">ABOUT PLACEMENT CELL </h6>
+							<p style="margin-top:40px;">Welcome to the Training & Placement Department of Ambalika
+								Institute of Management & Technology!</p>
+							<p>In a short span of 10 years, since its establishment, AIMT has built a reputation as
+								institution par excellence dedicated towards holistic development of students with a
+								strong foundation of experiential learning including scientific, technical and soft
+								skill training.</p>
+							<p>Training & Placement Department is an integral part of the institute where the activities
+								are organized throughout the year in an effort towards preparing the prospective
+								students for the campus selection programs.</p>
+							<p>AIMT believes in following the essence of the definition of Engineering by training the
+								students to make the reality of the potential value of science by translating scientific
+								knowledge into tools. What set us apart are our approach and the mechanism which
+								reflects our competence and farsightedness.</p>
+							<hr>
+
+							<h6 style="font-size: 1.5rem;text-align: center;">Message from General Manager :</h6>
+							<P style="margin-top:40px;">At AIMT, we constantly aspire to encourage student engagement
+								for intellectual and personal growth and help students to clarify their educational and
+								career goals. We continuously assist students in developing and implementing an
+								educational plan and teach them to use resources and relationships to maximize their
+								educational and personal potential.</P>
+
+							<p>We have taken upon us to make each and every student at Ambalika an ambassador of
+								perfection, a perfect amalgamation of modern outlook and ancient values systems making
+								them the most sought after contributors in their areas of work and a responsible citizen
+								of the nation.</p>
+
+							<p>We give immense stress on Innovation and passion, for which there are well-equipped state
+								of the art Robotic and CNC machine training facilities, science laboratories and
+								excellent seminar hall equipped with latest audio visual facilities to give the students
+								all the necessary thrust required.</p>
+
+							<p>Our Mission and Vision is to be an ace Institute which helps in shaping our country and
+								for that we have a strong fleet of robust Teachers and Educators who are committed to
+								nurture, train and develop our students through continuous, creative and committed
+								process.</p>
+							<hr>
+
+							<h6 style="font-size: 1.5rem;text-align: center;">Message from HOD – TRAINING (Personality
+								Development) (Mrs. Shweta Mishra):</h6>
+							<P style="margin-top:40px;">The training department caters to the programs that are
+								specifically designed to match up with the professional world and to ensure that
+								participants at Ambalika Institute of Management & Technology are given adequate
+								opportunity to gain skills that will help to improve their functional efficiency.</P>
+
+							<p>The programs cover all the three important aspects of an individual’s personality –
+								Thoughts (Mind), Speech (Communication) and Actions (Behavior). For this, special
+								efforts are made to groom students to meet the standards of industry, both in technical
+								knowledge and in soft/life skills. When effectively managed with collaborative efforts,
+								the modules ensures that the students learn relevant skill sets and develop positive and
+								constructive attitude to make them industry ready.</p>
+							<hr>
+
+							<h6 style="font-size: 1.5rem;text-align: center;">Message from Training and Placement
+								Officer (Mr. Amritanshu Vaish):</h6>
+							<p style="margin-top:40px;">It gives me great pleasure to invite you to the Placement
+								Programme at Ambalika Institute of Management and Technology, Lucknow. I consider it to
+								be an honor and opportunity to present to you a group of young, dynamic individuals who
+								have been groomed to face challenges that lie ahead for them in the industry and
+								corporate world as a whole. A meticulous academic procedure has equipped students with
+								the proficient and special skills to do extremely well in various demanding situations
+								with ease and confidence. Interaction with the industry is done on a regular basis as
+								many speakers from well-known companies share their expertise with our students. Our
+								teaching pedagogy which includes presentations, case studies, live projects, educational
+								and industrial tours and participation in seminars and conferences, club activities,
+								sports and cultural activities which help towards acquiring skills sought after and
+								needed by organizations. Training and Placement Cell also takes initiative in building
+								relationship with the leading industries in various sectors so that pre employment
+								training can be easily made available to students. We not only work for placing students
+								to various companies but we also ensure their overall growth.</p>
+							<hr>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+</body>
+
+</html>

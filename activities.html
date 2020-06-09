@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>creating a web site</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+	<!---navigation bar-->
+	<section id="nav-bar">
+		<nav class="navbar navbar-expand-lg  ">
+
+			<div id="clockbox"></div>
+
+			<script type="text/javascript">
+				var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+				var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+				function GetClock() {
+					var d = new Date();
+					var nday = d.getDay(), nmonth = d.getMonth(), ndate = d.getDate(), nyear = d.getFullYear();
+					var nhour = d.getHours(), nmin = d.getMinutes(), nsec = d.getSeconds(), ap;
+
+					if (nhour == 0) { ap = " AM"; nhour = 12; }
+					else if (nhour < 12) { ap = " AM"; }
+					else if (nhour == 12) { ap = " PM"; }
+					else if (nhour > 12) { ap = " PM"; nhour -= 12; }
+
+					if (nmin <= 9) nmin = "0" + nmin;
+					if (nsec <= 9) nsec = "0" + nsec;
+
+					var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
+					document.getElementById('clockbox').innerHTML = clocktext;
+				}
+
+				GetClock();
+				setInterval(GetClock, 1000);
+			</script>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="the-institute.html">The institute</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="academics.html">Academics</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="infrastructure.html">Infrasrtructure</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="activities.html">Activities</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="placement.html">Placement</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+	<!----------Image---------->
+	<div id="slider">
+		<div id="headerSlider" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#headerSlider" data-slide-to="0" class="active"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="cup.jpg"
+						style="width:100%; height: 500px;">
+				</div>
+				<div class="carousel-caption">
+					<h5>Activities</h5>
+				</div>
+
+			</div>
+		</div>
+		<!-------About--------->
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 style="text-align: center;">INFORMATION TECHNOLOGY DEPARTMENT CLUB</h2>
+						<div class="about-content">
+							<h6 style="font-size: 1.5rem;">Objective :</h6>
+							<p>This club is basically formed to enhance skill level of student other than regular
+								curriculum and give benefits to student who wants to do more activity with their talent
+								in the field of computer technology & networking.
+								Club also focuses on personality development programs through live activities from
+								industrial environment.</p>
+							<hr>
+
+							<h6 style="font-size: 1.5rem;">Activities :</h6>
+							<P>
+								<li>Ethical hacking understanding & concept evaluation.</li>
+								<li>Aptitude, General knowledge & Reasoning Question practice papers for skill
+									enhancement.</li>
+								<li>Study material-related to subjects (covering all IIT & NIT slides).</li>
+								<li>Networking Fundamentals for exposure towards information technology.</li>
+								<li>Gain attention from social networking sites with rich source of information..</li>
+							</P>
+							<hr>
+
+							<h6 style="font-size: 1.5rem;">Members :</h6>
+							<P>
+								<li>Mr. JAI PRATAP DIXIT – MENTOR/DESIGNER( 7376253763 )</li>
+								<li>Mr. SUNIL KUMAR VISHWAKARMA – PROGRAM INITIATOR</li>
+								<li>Mr. UPENDRA CHAUHAN – ADMIN & PLANNER</li>
+								<li>Mrs. PRERNITA DWIVEDI – PROGRAM ORGANISER</li>
+								<li>Mr. RIDDHMAN GHOSH – DEVELOPER</li>
+							</P>
+							<hr>
+
+							<h6 style="font-size: 1.5rem;">Contact :</h6>
+							<p>HOD-IT , AMBALIKA Lucknow @ 7376253763.</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+</body>
+
+</html>

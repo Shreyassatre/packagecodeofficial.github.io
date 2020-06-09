@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>creating a web site</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+	<!---navigation bar-->
+	<section id="nav-bar">
+		<nav class="navbar navbar-expand-lg  ">
+
+			<div id="clockbox"></div>
+
+			<script type="text/javascript">
+				var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+				var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+				function GetClock() {
+					var d = new Date();
+					var nday = d.getDay(), nmonth = d.getMonth(), ndate = d.getDate(), nyear = d.getFullYear();
+					var nhour = d.getHours(), nmin = d.getMinutes(), nsec = d.getSeconds(), ap;
+
+					if (nhour == 0) { ap = " AM"; nhour = 12; }
+					else if (nhour < 12) { ap = " AM"; }
+					else if (nhour == 12) { ap = " PM"; }
+					else if (nhour > 12) { ap = " PM"; nhour -= 12; }
+
+					if (nmin <= 9) nmin = "0" + nmin;
+					if (nsec <= 9) nsec = "0" + nsec;
+
+					var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
+					document.getElementById('clockbox').innerHTML = clocktext;
+				}
+
+				GetClock();
+				setInterval(GetClock, 1000);
+			</script>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="the-institute.html">The institute</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="academics.html">Academics</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="infrastructure.html">Infrasrtructure</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="activities.html">Activities</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="placement.html">Placement</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+	<!----------slider---------->
+	<div id="slider">
+		<div id="headerSlider" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#headerSlider" data-slide-to="0" class="active"></li>
+				<li data-target="#headerSlider" data-slide-to="1"></li>
+				<li data-target="#headerSlider" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="institute.jpg"
+						class="d-block ">
+				</div>
+				<div class="carousel-caption">
+					<h5>About the Institute</h5>
+				</div>
+
+			</div>
+		</div>
+		<!-------About--------->
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 style="text-align: center;">ABOUT INSTITUTE</h2>
+						<div class="about-content">
+							<p>It was established in 2008 as a private engineering and management college in
+								(Mohanlalganj) Lucknow, Uttar Pradesh India and is affiliated to AKTU and BTE and
+								Approved by AICTE. The Lucknow campus is spread over 200 acres and is located near
+								NH-56B, surrounded by lush green field and enhanced by a beautiful lake.The institute is
+								24 kilometers from Lucknow Railway Station and 20 kilometers from Amausi Airport,
+								Lucknow. It is very well connected to the district headquarters.</p>
+
+							<p>Ambalika center of excellence has become the most dominating center delivering high-end
+								technical skills to our engineers to make them highly employable. AIMT, Lucknow is
+								imparting training and joint certification programs of innovative technologies in
+								collaboration with the Industry giants such as Microsoft, KUKA Robotics, Siemens, Ace
+								Micromatics, MTab, Master CAM etc.</p>
+						</div>
+						<button type="button" class="btn btn-primery" style="background:blue; color: white;">Read
+							more</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-----other content------------->
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h2>REPUTED FACULTY</h2>
+						<div class="about-content">
+							An army of highly experienced and qualified faculty with Ph.D, M.Tech, M.Phil, MBA from
+							institutes of national repute like IIT and IIM are our real assets. AIMT’s faculty is a pool
+							of rich talent, comprising of seasoned professionals from-industries, consultancies and
+							academics. Their different backgrounds and varied experiences provide valuable insights into
+							dynamic and challenging world of business and industry. These faculty members greatly
+							contribute to shape the students into successful professionals by introducing them to
+							different perspectives and inspiring them to think beyond the curriculum. In addition, the
+							Institute has vigilantly identified adjunct and guest faculty from the industry, who
+							supplement this process and provide industry-based key inputs. AIMT also has business
+							leaders and top corporate managers on its list of regular speakers.
+						</div>
+					</div>
+					<div class="col-md-6">
+						<h2>HIGHLIGHTS</h2>
+						<div class="about-content">
+							The aesthetically designed Air-conditioned class rooms are equipped with modern teaching
+							sophisticated Engineering and Science Labs. The campus has a well managed infrastructure
+							with facilities like Library with updated collection of books & journals, Digital Library,
+							spacious, well equipped & well managed separate Hostels for boys and girls, round the clock
+							Internet center,supportive technical aids like LCD projector, OHPS, public address systems,
+							excellent facilities for indoor and outdoor sports and games, Gymnasium, Auditorium,
+							Amphitheater & Seminar Hall,Canteen with hygienic and nutritious food, 500 litre -hour water
+							Distillation plant for producing safe & portable water, Daily bus service from campus to
+							city centers, Students tracking system and a light Private Security System around the
+							campus.
+						</div>
+					</div>
+				</div>
+		</section>
+		<hr>
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h2>THE GROUP CONSIST OF</h2>
+						<div class="about-content">
+							In this highly competitive world our institute is dedicated to provide assistance and
+							guidance to the students for their careers. A number of reputed companies/organizations are
+							associated with AIMT which offer immense training and employment opportunities to our
+							students. The institute enjoys ‘Tie-ups’ with prestigious corporate houses for tailor made
+							programs. Some of these groups are:-
+							<li>L&T</li>
+							<li>Grasim Aditya Birla Group</li>
+							<li>Zenith Computers</li>
+							<li>Nagarjuna Constructions Ltd</li>
+							<li>Hindustan Constructions Limited</li>
+							<li>Soilmec Foundation Equipment Private Limited</li>
+							<li>RMC India Limited</li>
+							<li>HCL</li>
+							<li>LG Electronics</li>
+							<li>Crompton Greaves etc.</li>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<h2>THE GROUP CONSIST OF</h2>
+						<div class="about-content">
+							<li>Ambalika Construction LTD.</li>
+							<li>Ambalika Rental Division, Civil Equipments(No.1 in NORTH INDIA).</li>
+							<li>Ambalika Ready-mix Concrete.</li>
+							<li>Ambalika Institute of Management and Technology.</li>
+							<li>Ambalika Software Solutions (TWA INTERNET TECHNOLOGIES Pvt Ltd., a sister concern
+								company).</li>
+							<li>Ambalika Chitfund Pvt LTD.</li>
+							<li>Ambalika Infrastructure Pvt Ltd.</li>
+							<li>Stonemart INDIA.</li>
+							<li>Ashlay Infrastructure</li>
+						</div>
+					</div>
+				</div>
+		</section>
+</body>
+
+</html>

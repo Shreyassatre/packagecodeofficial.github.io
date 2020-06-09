@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>creating a web site</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+	<!---navigation bar-->
+	<section id="nav-bar">
+		<nav class="navbar navbar-expand-lg  ">
+
+			<div id="clockbox"></div>
+
+			<script type="text/javascript">
+				var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+				var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+				function GetClock() {
+					var d = new Date();
+					var nday = d.getDay(), nmonth = d.getMonth(), ndate = d.getDate(), nyear = d.getFullYear();
+					var nhour = d.getHours(), nmin = d.getMinutes(), nsec = d.getSeconds(), ap;
+
+					if (nhour == 0) { ap = " AM"; nhour = 12; }
+					else if (nhour < 12) { ap = " AM"; }
+					else if (nhour == 12) { ap = " PM"; }
+					else if (nhour > 12) { ap = " PM"; nhour -= 12; }
+
+					if (nmin <= 9) nmin = "0" + nmin;
+					if (nsec <= 9) nsec = "0" + nsec;
+
+					var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
+					document.getElementById('clockbox').innerHTML = clocktext;
+				}
+
+				GetClock();
+				setInterval(GetClock, 1000);
+			</script>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="the-institute.html">The institute</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="academics.html">Academics</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="infrastructure.html">Infrasrtructure</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="activities.html">Activities</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="placement.html">Placement</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+	<!----------Image---------->
+	<div id="slider">
+		<div id="headerSlider" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#headerSlider" data-slide-to="0" class="active"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="academics.jpg"
+						style="width: 100%;height: 500px">
+				</div>
+				<div class="carousel-caption">
+					<h5>Academics</h5>
+				</div>
+
+			</div>
+		</div>
+		<!-------About--------->
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 style="text-align: center;">DEPARTMENT OF BUSINESS ADMINISTRATION</h2>
+						<div class="about-content">
+							<h6 style="font-size: 1.5rem;">VISION</h6>
+							<p>The department shall endeavor to promote entrepreneurial culture, develop managerial and
+								communication skills of the students to enable them in contributing to the development
+								of the society and the nation.</p>
+							<hr>
+
+							<h6 style="font-size: 1.5rem;">MISSION</h6>
+							<P>
+								<li>To impart professional education and training in the field of management and
+									entrepreneurship education.</li>
+								<li>To disseminate knowledge and information by organizing seminars/workshops/industrial
+									visits to develop professionalism.</li>
+								<li>To interact with the industrial organizations to meet the demand of quality
+									technical human resource.</li>
+								<li>To Become best college for MBA in Lucknow, Uttar Pradesh (UP), India</li>
+								<li>Developing knowledge driven, inspiring minds and dynamic leaders for betterment of
+									the world around us.</li>
+							</P>
+							<hr>
+
+							<h6 style="font-size: 1.5rem;">PROGRAM EDUCATIONAL OBJECTIVES (PEOs) :</h6>
+							<P>
+								<li>Students will establish themselves as effective professionals by solving real
+									problems through the use of management science knowledge and with attention to team
+									work, effective communication, critical thinking and problem solving skills..</li>
+								<li>Students will develop professional skills that prepare them for immediate employment
+									and for life-long learning in advanced areas of management and related fields.</li>
+								<li>Students will demonstrate their ability to adapt to a rapidly changing environment
+									by having learnt and applied new skills and new competencies.</li>
+								<li>To Become best college for MBA in Lucknow, Uttar Pradesh (UP), India</li>
+								<li>Students will be provided with an educational foundation that prepares them for
+									excellence, leadership roles along diverse career paths with encouragement to
+									professional ethics and active participation needed for a successful career.</li>
+							</P>
+							<hr>
+
+							<h6 style="font-size: 1.5rem;">FINANCE</h6>
+							<p>This activity is called Financial Management which is controlled by the Finance Manager.
+							</p>
+
+							<p>The students always think that, why they should go for MBA in Finance. While there are
+								many other specializations in MBA curriculum, then what is the scope of finance?</p>
+
+							<p>It is the age of industrialization. Many industries are coming up in many developed and
+								developing countries. Finance is the basic need to start an industry and in according to
+								the money management of the resources, its proper collection and distribution. MBA is a
+								two years degree program affiliated with some recognized university .</p>
+							<hr>
+
+							<h6 style="font-size: 1.5rem;">MARKETING</h6>
+							<p>MBA in Marketing has become one of the most popular degrees both by students and
+								employers in modern era. With the shift to digital and online marketing, most businesses
+								now have their own, in-house marketing teams that specialize in bringing traffic and
+								customers to the company..</p>
+
+							<p>There are a number of areas of marketing but MBA in marketing doesn’t limit the degree
+								holder in pursuing marketing careers alone. The skill set can be put towards dozens of
+								other career options, from consulting to entrepreneurial management.</p>
+
+							<p>The course is designed in such a way that prospective students attain potential to become
+								excellent marketing manager and acquire high salary packages.
+								MBA in Marketing is designed to teach students a wide variety of soft skills, such as
+								communications, analytical and leadership skills that can then be applied to a wide
+								variety of positions across any number of companies and industries – no two companies
+								are going to need, or demand, the exact same requirements from their marketing manager.
+							</p>
+							<hr>
+
+							<h6 style="font-size: 1.5rem;">HUMAN RESOURCES</h6>
+							<p>Students in MBA program with a focus in human resource management can take courses in
+								business strategies and concepts, with an emphasis on corporate headhunting, benefits
+								analysis, compensation management and business coaching. MBA program typically involves
+								advanced level assignments, reports, presentations, internships and group projects.
+								Programs typically take about two years to complete.</p>
+
+							<p>Coursework typically involves basic business concepts and human resource-specific topics.
+								Students can be taught business strategies and learn to use them in everyday business
+								operations.</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>creating a web site</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+	<!---navigation bar-->
+	<section id="nav-bar">
+		<nav class="navbar navbar-expand-lg  ">
+
+			<div id="clockbox"></div>
+
+			<script type="text/javascript">
+				var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+				var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+				function GetClock() {
+					var d = new Date();
+					var nday = d.getDay(), nmonth = d.getMonth(), ndate = d.getDate(), nyear = d.getFullYear();
+					var nhour = d.getHours(), nmin = d.getMinutes(), nsec = d.getSeconds(), ap;
+
+					if (nhour == 0) { ap = " AM"; nhour = 12; }
+					else if (nhour < 12) { ap = " AM"; }
+					else if (nhour == 12) { ap = " PM"; }
+					else if (nhour > 12) { ap = " PM"; nhour -= 12; }
+
+					if (nmin <= 9) nmin = "0" + nmin;
+					if (nsec <= 9) nsec = "0" + nsec;
+
+					var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
+					document.getElementById('clockbox').innerHTML = clocktext;
+				}
+
+				GetClock();
+				setInterval(GetClock, 1000);
+			</script>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="the-institute.html">The institute</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="academics.html">Academics</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="infrastructure.html">Infrasrtructure</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="activities.html">Activities</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="placement.html">Placement</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+	<!----------Image---------->
+	<div id="slider">
+		<div id="headerSlider" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#headerSlider" data-slide-to="0" class="active"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="infrastructure.jpg"
+						style="width: 100%;height: 500px">
+				</div>
+				<div class="carousel-caption">
+					<h5>Infrastucture Of Institute</h5>
+				</div>
+
+			</div>
+		</div>
+		<!-------About--------->
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 style="text-align: center;">CLASS ROOM</h2>
+						<div class="about-content">
+							<p>The Teaching-Learning pedagogy used in the classrooms is IT enabled and almost all the
+								classrooms are fitted with LCD projectors, OHPs and sound systems. The lecture halls can
+								accommodate 80 students in one class and tutorial classes are designed for strength of
+								20-30 students.</p>
+
+							<img src="classroom.png"
+								style="width: 1110px">
+
+							<p style="margin-top: 20px;">We have a Wi-Fi-enabled campus, on which a Learning Management
+								System(LMS) is made available, which can facilitate students to discuss academic topics,
+								submit their assignments online, see their class notes, study through specially designed
+								learning resources, and also refer to reference and digital library. The campus as well
+								as student hostels are Wi-Fi enabled with a bandwidth of more than 20 Mbps.</p>
+							<hr>
+
+							<h2 style="text-align: center; margin-bottom: 30px">SPORTS FACILITIES</h2>
+							<p>The exposure to co-curricular activities in the form of games, both indoor and outdoor &
+								cultural activities helps to develop individual initiative, group leadership and
+								cooperation in students. The institute has facilities for Table Tennis, Billiards,
+								Badminton, Volley Ball, Air Hockey, Air Foot Ball and Cricket.</p>
+
+							<img src="sports.png"
+								style="width: 1110px">
+							<hr>
+
+							<h2 style="text-align: center; margin-bottom: 30px">LABORATORIES</h2>
+							<p>Knowledge is rendered purposeless without application. We don’t learn perfectly unless we
+								experience properly. Thus, to facilitate the practical implementation of theoretical
+								learning, our premise is equipped with state-of-the-art laboratories. We actively cater
+								to the needs of the students making use of the latest equipments and instruments
+								available for experimentation. The safety of our students, faculty members guiding them,
+								and the laboratory staff who maintain our laboratories is an important concern for us.
+								Hence, all our laboratories have been constructed with care and caution and we have
+								followed all the requisite guidelines prescribed universally for our various
+								laboratories.</p>
+
+							<img src="lab.png" style="width: 1110px">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+</body>
+
+</html>

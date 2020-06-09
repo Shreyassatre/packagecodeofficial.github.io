@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!-----navigation bar----------->
+	<section id="nav-bar">
+		<nav class="navbar navbar-expand-lg  ">
+		   <div id="clockbox"></div>
+
+<script type="text/javascript">
+var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+function GetClock(){
+var d=new Date();
+var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+
+if(nhour==0){ap=" AM";nhour=12;}
+else if(nhour<12){ap=" AM";}
+else if(nhour==12){ap=" PM";}
+else if(nhour>12){ap=" PM";nhour-=12;}
+
+if(nmin<=9) nmin="0"+nmin;
+if(nsec<=9) nsec="0"+nsec;
+
+var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+document.getElementById('clockbox').innerHTML=clocktext;
+}
+
+GetClock();
+setInterval(GetClock,1000);
+</script>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav ml-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="time.html">Home <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">The institute</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Academics</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Infrasrtructure</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Activittes</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">missions</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">contact</a>
+		      </li>
+		    </ul>
+		  </div>
+        </nav>
+	</section>
+</body>
+</html>

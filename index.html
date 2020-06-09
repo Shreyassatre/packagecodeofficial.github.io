@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>creating a web site</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+	<!---navigation bar-->
+	<section id="nav-bar">
+		<nav class="navbar navbar-expand-lg  ">
+
+			<div id="clockbox"></div>
+
+			<script type="text/javascript">
+				var tday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+				var tmonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+				function GetClock() {
+					var d = new Date();
+					var nday = d.getDay(), nmonth = d.getMonth(), ndate = d.getDate(), nyear = d.getFullYear();
+					var nhour = d.getHours(), nmin = d.getMinutes(), nsec = d.getSeconds(), ap;
+
+					if (nhour == 0) { ap = " AM"; nhour = 12; }
+					else if (nhour < 12) { ap = " AM"; }
+					else if (nhour == 12) { ap = " PM"; }
+					else if (nhour > 12) { ap = " PM"; nhour -= 12; }
+
+					if (nmin <= 9) nmin = "0" + nmin;
+					if (nsec <= 9) nsec = "0" + nsec;
+
+					var clocktext = "" + tday[nday] + ", " + tmonth[nmonth] + " " + ndate + ", " + nyear + " " + nhour + ":" + nmin + ":" + nsec + ap + "";
+					document.getElementById('clockbox').innerHTML = clocktext;
+				}
+
+				GetClock();
+				setInterval(GetClock, 1000);
+			</script>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="the-institute.html">The institute</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="academics.html">Academics</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="infrastructure.html">Infrasrtructure</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="activities.html">Activities</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="placement.html">Placement</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="#contact">contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+	<!----------slider---------->
+	<div id="slider">
+		<div id="headerSlider" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#headerSlider" data-slide-to="0" class="active"></li>
+				<li data-target="#headerSlider" data-slide-to="1"></li>
+				<li data-target="#headerSlider" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="scientists.jpg"
+						class="d-block " alt="...">
+				</div>
+				<div class="carousel-caption">
+					<h5>Welcome to our website</h5>
+				</div>
+				<div class="carousel-item">
+					<img src="laptop.jpg"
+						class="d-block " alt="...">
+				</div>
+				<div class="carousel-caption">
+					<h5>Welcome to our website</h5>
+				</div>
+				<div class="carousel-item">
+					<img src="pencil.jpg" class="d-block" alt="...">
+				</div>
+				<div class="carousel-caption">
+					<h5>Welcome to our website</h5>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#headerSlider" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#headerSlider" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	<!-------About--------->
+	<section id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h2>About Us</h2>
+					<div class="about-content">
+						Best Reserch Center & Development committee in mumbai, Vidyalankar Institute and Group was
+						established to provide high quality professional education in the streams of
+						Engineering and Management. The Trustee is currently managing vidylankar Const
+						ruction Limited, Ambalika Chit fund Limited and Ambalika Farms & Resorts Ltd.
+						The main lines of business of the promoters are Infrastructure Development ac
+						tivities, Building Construction, Machinery Rental, Transportation & Logistics,
+						Earthwork, Mining and Crushing. The business is carried out by the group’s parent
+						company Ambalika Construction Limited. The state of Uttar Pradesh has vast
+						natural resources. But it is still behind in the field of Technical.
+					</div>
+					<button type="button" class="btn btn-primery" style="background:blue;">Read more</button>
+				</div>
+				<div class="col-md-6 skills-bar">
+					<p>About Institute</p>
+					<div class="progress">
+						<div class="progress-bar" style="width:90%;">90%</div>
+					</div>
+					<p>Chancellor's </p>
+					<div class="progress">
+						<div class="progress-bar" style="width:75%;">75%</div>
+					</div>
+					<p>Workshop</p>
+					<div class="progress">
+						<div class="progress-bar" style="width:85%;">85%</div>
+					</div>
+					<p>Other activities</p>
+					<div class="progress">
+						<div class="progress-bar" style="width:70%;">70%</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!---------Services------------->
+	<section id="services">
+		<div class="container">
+			<h1>Our Programs</h1>
+
+			<div class="row services">
+				<div class="col-md-3 text-center">
+					<div class="icon">
+						<i class="fa fa-desktop"></i>
+					</div>
+					<h3>Web Development</h3>
+					<p>Web development broadly refers to the tasks associated with developing websites
+						for hosting via intranet or internet. The web development process includes web design,
+						web content development, client-side/server-side scripting, and network security
+						configuration, among other tasks
+
+						<li>Content management systems</li>
+						<li>Virtual shops and ecommerce</li>
+						<li>Presentation websites</li>
+						<li>Online catalogues</li>
+						<li>Portal systems</li>
+						<li>& any other dynamic website</li>
+					</p>
+				</div>
+
+				<div class="col-md-3 text-center">
+					<div class="icon">
+						<i class="fa fa-tablet"></i>
+					</div>
+					<h3>App Development</h3>
+					<p> Application development is the process of
+						creating a computer program or a set of programs to perform the different tasks
+						that a business requires. ... Every app-building process follows the same steps:
+						gathering requirements, designing prototypes, testing, implementation, and
+						integration.
+
+						<li>Content management systens</li>
+						<li>Virtual shops and ecommerce</li>
+						<li>Presentation websites</li>
+						<li>Online catalogues</li>
+						<li>Portal systems</li>
+						<li>& any other dynamic website</li>
+					</p>
+				</div>
+
+				<div class="col-md-3 text-center">
+					<div class="icon">
+						<i class="fa fa-paint-brush"></i>
+					</div>
+					<h3>Graphic Designing</h3>
+					<p>Graphic designers create visual concepts, by hand or using computer software,
+						to communicate ideas that inspire, inform, or captivate consumers. They develop
+						the overall layout and production design for advertisements, brochures, magazines,
+						and corporate reports.
+						<li>Logo design</li>
+						<li>Flyers & Brochures</li>
+						<li>Business Cards</li>
+						<li>Stationery Design</li>
+						<li>Powerpoint presentation</li>
+						<li>Print Ads / Magazine</li>
+					</p>
+				</div>
+
+				<div class="col-md-3 text-center">
+					<div class="icon">
+						<i class="fa fa-line-chart"></i>
+					</div>
+					<h3>Digital Marketing</h3>
+					<p> Digital marketing encompasses all marketing efforts that use an electronic device
+						or the internet. Businesses leverage digital channels such as search engines, social
+						media, email, and other websites to connect with current and prospective customers.
+						<li>Owned Media: Any online asset that you control like your website or social media channels.
+						</li>
+						<li>Paid Media: Promoting your online content to improve traffic to your owned media assets.
+						</li>
+						<li>Earned Media: Customers recommending you by word of mouth or through social media.</li>
+					</p>
+				</div>
+
+				<div class="col-md-3 text-center">
+					<div class="icon">
+						<i class="fa fa-tablet"></i>
+					</div>
+					<h3>UI Designing</h3>
+					<p> Marketable skills to look for in an UI development education program include
+						front-end web development, interactive media design, human-computer interaction,
+						usability testing, mobile development, graphic design, and team-centric soft skills,
+						such as effective interpersonal communication, leadership and project
+						<li>Gathering and evaluating user requirements.</li>
+						<li>Illustrating design ideas using storyboards, process flows and sitemaps.</li>
+						<li>Designing graphic user interface elements, like menus, tabs and widgets</li>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!------------taem members--------->
+	<section id="team">
+		<div class="container">
+			<h1>Our Team</h1>
+			<div class="row">
+				<div class="col-md-3 profile-pic text-center">
+					<div class="img-box">
+						<img src="shreyas.jpg" class="img-responsive">
+						<ul>
+							<a href="#">
+								<li><i class="fa fa-facebook"></i></li>
+							</a>
+							<a href="#">
+								<li><i class="fa fa-twitter"></i></li>
+							</a>
+							<a href="#">
+								<li><i class="fa fa-linkedin"></i></li>
+							</a>
+						</ul>
+					</div>
+					<h2>Shreyas Satre</h2>
+					<h3>Developer</h3>
+					<p>R&D engineers take leadership of projects in development, managing all team
+						members assigned to projects to keep them moving forward on schedule. R&D engineers
+						design detailed project plans with engineering, manufacturing, and sales and
+						marketing teams to manage all aspects of product development and production.</p>
+				</div>
+
+				<div class="col-md-3 profile-pic text-center">
+					<div class="img-box">
+						<img src="mayur.jpg" class="img-responsive">
+						<ul>
+							<a href="#">
+								<li><i class="fa fa-facebook"></i></li>
+							</a>
+							<a href="#">
+								<li><i class="fa fa-twitter"></i></li>
+							</a>
+							<a href="#">
+								<li><i class="fa fa-linkedin"></i></li>
+							</a>
+						</ul>
+					</div>
+					<h2>Mayur Satre</h2>
+					<h3>Manager</h3>
+					<p>manager performs a number of highly important roles within an organization. They are
+						responsible for research, planning, and implementing new programs and protocols into their
+						company or organization and overseeing the development of new products.</p>
+				</div>
+
+				<div class="col-md-3 profile-pic text-center">
+					<div class="img-box">
+						<img src="anchal.jpg" class="img-responsive">
+						<ul>
+							<a href="#">
+								<li><i class="fa fa-facebook"></i></li>
+							</a>
+							<a href="#">
+								<li><i class="fa fa-twitter"></i></li>
+							</a>
+							<a href="#">
+								<li><i class="fa fa-linkedin"></i></li>
+							</a>
+						</ul>
+					</div>
+					<h2>Aanchal Bamugade</h2>
+					<h3>UI Desiger</h3>
+					<p>UI Designers are generally responsible for collecting, researching, investigating
+						and evaluating user requirements. Their responsibility is to deliver an outstanding
+						user experience providing an exceptional and intuitive application design.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-3 profile-pic text-center">
+					<div class="img-box">
+						<img src="yash.jpg" height="250" width="300" class="img-responsive">
+						<ul>
+							<a href="#">
+								<li><i class="fa fa-facebook"></i></li>
+							</a>
+							<a href="#">
+								<li><i class="fa fa-twitter"></i></li>
+							</a>
+							<a href="#">
+								<li><i class="fa fa-linkedin"></i></li>
+							</a>
+						</ul>
+					</div>
+					<h2>Yash Patil</h2>
+					<h3>Digital Marketing Head</h3>
+					<p>Digital marketing encompasses all marketing efforts that use an electronic device
+						or the internet. Businesses leverage digital channels such as search engines, social
+						media, email, and other websites to connect with current and prospective customers.</p>
+				</div>
+
+				<div class="col-md-3 profile-pic text-center">
+					<div class="img-box">
+						<img src="shriyash.jpg" class="img-responsive">
+						<ul>
+							<a href="#">
+								<li><i class="fa fa-facebook"></i></li>
+							</a>
+							<a href="#">
+								<li><i class="fa fa-twitter"></i></li>
+							</a>
+							<a href="#">
+								<li><i class="fa fa-linkedin"></i></li>
+							</a>
+						</ul>
+					</div>
+					<h2>Shriyash Gharat</h2>
+					<h3>Graphic Designer</h3>
+					<p>Graphic designers create visual concepts, using computer software or by hand,
+						to communicate ideas that inspire, inform, and captivate consumers. They develop
+						the overall layout and production design for applications such as advertisements
+						, brochures, magazines, and reports..</p>
+				</div>
+
+				<div class="col-md-3 profile-pic text-center">
+					<div class="img-box">
+						<img src="druti.jpg" class="img-responsive">
+						<ul>
+							<a href="#">
+								<li><i class="fa fa-facebook"></i></li>
+							</a>
+							<a href="#">
+								<li><i class="fa fa-twitter"></i></li>
+							</a>
+							<a href="#">
+								<li><i class="fa fa-linkedin"></i></li>
+							</a>
+						</ul>
+					</div>
+					<h2>Dhruti Jain</h2>
+					<h3>Tester</h3>
+					<p>Software Testers are responsible for the quality of software development and
+						deployment. They are involved in performing automated and manual tests to ensure
+						the software created by developers is fit for purpose. Some of the duties include
+						analysis of software, and systems, mitigate risk and prevent software issues.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!---------promo-------->
+	<section id="promo">
+		<div class="container">
+			<p>Click here to get information about addmission process</p>
+			<a href="#" class="btn btn-primary">Contact us</a>
+		</div>
+	</section>
+	<!--------------testimonials------------->
+	<section id="testimonials">
+		<div class="container">
+			<h1>Testimonials</h1>
+			<p class="text-center"></p>
+			<div class="row">
+				<div class="col-md-4 text-center">
+					<div class="profile">
+						<img src="vrushabh.jpg" class="user">
+						<blockquote>
+							Co-founders are in charge of developing financial estimates and setting milestones and
+							timelines. A co-founder estimates costs to bring their product to market, develops financial
+							plans to determine break-even points and ensure long-term solvency, and sets budgets as the
+							company grows.
+						</blockquote>
+						<h3>Vrushabh Gawde <span>Co-Founder</span></h3>
+					</div>
+				</div>
+
+				<div class="col-md-4 text-center">
+					<div class="profile">
+						<img src="harsh.jpg" class="user">
+						<blockquote>
+							A manager has to perform functions like planning, organizing, staffing, directing and
+							controlling. All these functions are essential for running an organization smoothly and
+							achieving enterprise objectives. Planning is required for setting goals and establishing
+							strategies for coordinating activities.
+						</blockquote>
+						<h3>Harsh Chedda <span>manager</span></h3>
+					</div>
+				</div>
+
+				<div class="col-md-4 text-center">
+					<div class="profile">
+						<img src="shreyas2.jpg" class="user">
+						<blockquote>
+
+							Featured snippet from the web
+							Founders take an active interest in getting the enterprise off the ground, finding and
+							investing resources to form the company and helping it succeed. When two or more people
+							establish a company, they are known as co-founders and, since they launch new companies,
+							founders are also entrepreneurs.
+						</blockquote>
+						<h3>Shreyas Satre <span>Founder</span></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!----------------Get in touch------------------>
+	<a name="contact"></a>
+	<section id="contact">
+		<div class="container">
+			<h1>Get In Touch</h1>
+			<div class="row">
+				<div class="col-md-6">
+					<form class="contact-form">
+						<div class="form-group">
+							<input type="text" class="form-control" name="username" placeholder="Your-name">
+						</div>
+
+						<div class="form-group">
+							<input type="number" class="form-control" name="phone" placeholder="Phone no.">
+						</div>
+
+						<div class="form-group">
+							<input type="email" class="form-control" name="email" placeholder="Email-id">
+						</div>
+						<label style="color:gray;">Enter Message:</label>
+						<div class="form-group">
+							<textarea class="form-control" rows="4" name="message" placeholder="Your message">
+							</textarea>
+						</div>
+
+						<button type="submit" class="btn btn-primary">Send Message</button>
+					</form>
+				</div>
+				<div class="col-md-6 contact-info">
+					<div class="follow"><b>Address: </b><i class="fa fa-map-marker"></i> XYZ Road, Mumbai, India</div>
+
+					<div class="follow"><b>Phone:</b><i class="fa fa-phone"></i> +91 9930040655</div>
+
+					<div class="follow"><b>Email:</b><i class="fa fa-envelope-o"></i> satreshreyas@gmail.com</div>
+
+					<div class="follow"><label><b>Get Social:</b></label>
+						<a href="#"><i class="fa fa-facebook"></i></a>
+						<a href="#"><i class="fa fa-twitter"></i></a>
+						<a href="#"><i class="fa fa-youtube-play"></i></a>
+						<a href="#"><i class="fa fa-google-plus"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-------------footer---------->
+
+	<section id="footer">
+		<div class="container text-center">
+			<p>Created By Shreyas S. Satre.</p>
+		</div>
+	</section>
+</body>
+
+</html>
